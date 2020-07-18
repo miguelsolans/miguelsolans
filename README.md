@@ -8,7 +8,7 @@ I am available to embrace new projects, drop me a line on my [LinkedIn page](htt
 - 🔭 I’m currently working on: Student Management system called [Mantis](https://github.com/miguelsolans/Equivalencias)
 - 🌱 I’m currently learning: React and Deno
 - 👯 I’m looking to collaborate on: Web Development Project, frontend and backend-wise
-- 📫 How to reach me: You can reach me on [LinkedIn](https://www.linkedin.com/in/miguelsolans/), Skype (miguelrsolans) or even via e-mail (dev.miguelsolans at gmail.com)
+- 📫 How to reach me: You can reach me on [LinkedIn](https://www.linkedin.com/in/miguelsolans/), Skype (miguelrsolans) or even via e-mail (dev.miguelsolans (at) gmail (dot) com)
 - ⚡ Fun fact: Terminator Judgment Day is still the best movie every produced. I love Music. I often do offroad. Like any other programmer, Coffee and Capuccino are my favorite hot drinks! 
 
 <!--
