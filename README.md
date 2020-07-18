@@ -3,8 +3,8 @@
 My name is Miguel Solans and I'm a half French & Portuguese Software Developer. Currently I'm based in Braga. 
 I am available to embrace new projects, drop me a line on my [LinkedIn page](https://www.linkedin.com/in/miguelsolans/).
 
-### FAQ
-
+### Quick Answers
+- 🌍 Based in Braga, Portugal, but also half French
 - 🔭 I’m currently working on: Student Management system called [Mantis](https://github.com/miguelsolans/Equivalencias)
 - 🌱 I’m currently learning: React and Deno
 - 👯 I’m looking to collaborate on: Web Development Project, frontend and backend-wise
