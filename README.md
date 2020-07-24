@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-My name is Miguel Solans and I'm a half French & Portuguese Software Developer. Currently I'm based in Braga. 
+My name is Miguel Solans and I am half French & half Portuguese Software Developer. Currently, I am based in Braga. 
 I am available to embrace new projects, drop me a line on my [LinkedIn page](https://www.linkedin.com/in/miguelsolans/).
 
 ### Quick Answers
@@ -9,7 +9,7 @@ I am available to embrace new projects, drop me a line on my [LinkedIn page](htt
 - 🌱 I’m currently learning: React and Deno
 - 👯 I’m looking to collaborate on: Web Development Project, frontend and backend-wise
 - 📫 How to reach me: You can reach me on [LinkedIn](https://www.linkedin.com/in/miguelsolans/), Skype (miguelrsolans) or even via e-mail (dev.miguelsolans (at) gmail (dot) com)
-- ⚡ Fun fact: Terminator Judgment Day is still the best movie every produced. I love Music. I often do offroad. Like any other programmer, Coffee and Capuccino are my favorite hot drinks! 
+- ⚡ Fun facts: Terminator Judgment Day is still the best movie ever produced. I love Music, classical and metal. I often do offroad. Coffee and Capuccino are my favorite hot drinks! 
 
 
 ### Portfolio of Projects
