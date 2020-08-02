@@ -19,7 +19,7 @@ Here's a list of projects I took part of, from latest to oldest
 - [Mantis](https://github.com/miguelsolans/Equivalencias): Student Management platform for the IT Department of University of Minho
 - [Crosswalks](https://github.com/miguelsolans/Crosswalks): An Academic Assignment which consists of many Micro-services for Crosswalk management 
 - [UMINHO-ISN](https://github.com/miguelsolans/UMINHO-ISN): Social Network for Technology Students of University of Minho
-- [ShowTime](https://github.com/miguelsolans/ShowTime): An ongoing personal project that keeps Track of bands seen live
+- [ShowTime](https://github.com/miguelsolans/ShowTime): An ongoing personal project during free-time that keeps Track of bands seen live
 
 <!--
 **miguelsolans/miguelsolans** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
