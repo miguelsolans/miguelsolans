@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/gantt/modules/gantt.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+
+        Highcharts.ganttChart('container', {
+            title: { text: "EnergizeMe Project" },
+            navigator: {
+                enabled: true,
+                series: {
+                    type: 'gantt'
+                }
+            },
+            scrollbar: {
+                enabled: true
+            },
+            rangeSelector: {
+                enabled: true,
+                selected: 0
+            },
+            exporting: {
+                sourceWidth: 4000
+            },
+            series: [{
+                name: 'EnergizeMe',
+                data: [
+                    {
+                        name: "Planeamento",
+                        id: "planeamento",
+                        pointWidth: 10
+                    },
+                    {
+                        parent: 'planeamento',
+                        name: "Análise do Mercado",
+                        id: 'analiseMercado',
+                        start: Date.UTC(2019, 8, 2),
+                        end: Date.UTC(2019, 8, 6)
+                    },
+                    {
+                        parent: 'planeamento',
+                        name: 'Elicitação de Requisitos',
+                        id: 'elicitacaoRequisitos',
+                        start: Date.UTC(2019, 8, 9),
+                        end: Date.UTC(2019, 8, 12),
+                        dependency: [ 'analiseMercado' ]
+                    },
+                    {
+                        parent: 'planeamento',
+                        name: "Prioritização de Requisitos",
+                        start: Date.UTC(2019, 8, 13),
+                        end: Date.UTC(2019, 8, 16),
+                        dependency: [ 'elicitacaoRequisitos' ]
+                    },
+                    {
+                        name: "Desenho",
+                        id: 'design',
+                        pointWidth: 10,
+                        dependency: [ 'planeamento' ]
+                    },
+                    {
+                        parent: 'design',
+                        name: "Desenho do Modelo Entidade-Relação",
+                        id: "modeloER",
+                        start: Date.UTC(2019, 8, 17),
+                        end: Date.UTC(2019, 8, 23)
+                    },
+                    {
+                        parent: 'design',
+                        name: "Desenho do Modelo de Classes",
+                        id: "modeloClass",
+                        start: Date.UTC(2019, 8, 17),
+                        end: Date.UTC(2019, 8, 23)
+                    },
+                    {
+                        parent: 'design',
+                        name: "Protótipo",
+                        id: "prototipo",
+                        start: Date.UTC(2019, 8, 17),
+                        end: Date.UTC(2019, 8, 23)
+                    },
+                    {
+                        parent: 'design',
+                        name: "Teste de Aceitação",
+                        start: Date.UTC(2019, 8, 23),
+                        end: Date.UTC(2019, 8, 25),
+                        dependency: [ 'modeloER', 'modeloClass', 'prototipo' ]
+                    },
+
+
+                    // Fase de Desenvolvimento
+                    {
+                        name: "Desenvolvimento",
+                        id: 'desenvolvimento',
+                        pointWidth: 10,
+                        dependency: [ 'design' ]
+                    },
+                    {
+                        parent: 'desenvolvimento',
+                        name: "Sprint 1",
+                        id: 'sprint1',
+                        pointWidth: 5
+                    },
+                    {
+                        parent: 'desenvolvimento',
+                        name: "Sprint 2",
+                        id: 'sprint2',
+                        pointWidth: 5,
+                        dependency: ['sprint1']
+                    },
+                    {
+                        parent: 'desenvolvimento',
+                        name: "Sprint 3",
+                        id: 'sprint3',
+                        pointWidth: 5,
+                        dependency: ['sprint2']
+                    },
+                    {
+                        parent: 'desenvolvimento',
+                        name: "Sprint 4",
+                        id: 'sprint4',
+                        pointWidth: 5,
+                        dependency: ['sprint3']
+
+                    },
+                    {
+                        parent: 'desenvolvimento',
+                        name: "Sprint 5",
+                        id: 'sprint5',
+                        pointWidth: 5,
+                        dependency: ['sprint4']
+
+                    },
+
+                    // Sprint 1
+                    {
+                        parent: 'sprint1',
+                        name: "Desenvolvimento",
+                        id: 'sprint1-Dev',
+                        start: Date.UTC(2019, 8, 30),
+                        end: Date.UTC(2019, 9, 14),
+                    },
+                    {
+                        parent: 'sprint1',
+                        name: "Testes Unitários",
+                        start: Date.UTC(2019, 9, 15),
+                        end: Date.UTC(2019, 9, 18),
+                        dependency: ['sprint1-Dev']
+
+                    },
+
+                    // Sprint 2
+                    {
+                        parent: 'sprint2',
+                        name: "Desenvolvimento",
+                        id: 'sprint2-Dev',
+                        start: Date.UTC(2019, 9, 21),
+                        end: Date.UTC(2019, 10, 4)
+                    },
+                    {
+                        parent: 'sprint2',
+                        name: "Testes Unitários",
+                        id: 'sprint2-Unit',
+                        start: Date.UTC(2019, 10, 15),
+                        end: Date.UTC(2019, 10, 16),
+                        dependency: [ 'sprint2-Dev' ]
+                    },
+                    {
+                        parent: 'sprint2',
+                        name: "Testes de Integração",
+                        start: Date.UTC(2019, 10, 5),
+                        end: Date.UTC(2019, 9, 18),
+                        dependency: [ 'sprint2-Unit' ]
+                    },
+                    // Sprint 3
+                    {
+                        parent: 'sprint3',
+                        name: "Desenvolvimento",
+                        id: 'sprint3-Dev',
+                        start: Date.UTC(2019, 10, 11),
+                        end: Date.UTC(2019, 10, 25)
+                    },
+                    {
+                        parent: 'sprint3',
+                        name: "Testes Unitários",
+                        id: 'sprint3-Unit',
+                        start: Date.UTC(2019, 10, 26),
+                        end: Date.UTC(2019, 10, 27),
+                        dependency: [ 'sprint3-Dev' ]
+                    },
+                    {
+                        parent: 'sprint3',
+                        name: "Testes de Integração",
+                        start: Date.UTC(2019, 10, 27),
+                        end: Date.UTC(2019, 10, 29),
+                        dependency: [ 'sprint3-Unit' ]
+                    },
+                    // Sprint 4
+                    {
+                        parent: 'sprint4',
+                        name: "Desenvolvimento",
+                        id: 'sprint4-Dev',
+                        start: Date.UTC(2019, 11, 2),
+                        end: Date.UTC(2019, 11, 16)
+                    },
+                    {
+                        parent: 'sprint4',
+                        name: "Testes Unitários",
+                        id: 'sprint4-Unit',
+                        start: Date.UTC(2019, 11, 17),
+                        end: Date.UTC(2019, 11, 18),
+                        dependency: [ 'sprint4-Dev' ]
+                    },
+                    {
+                        parent: 'sprint4',
+                        name: "Testes de Integração",
+                        start: Date.UTC(2019, 11, 18),
+                        end: Date.UTC(2019, 11, 20),
+                        dependency: [ 'sprint4-Unit' ]
+                    },
+
+                    // Sprint 5
+                    {
+                        parent: 'sprint5',
+                        name: "Desenvolvimento",
+                        id: 'sprint5-Dev',
+                        start: Date.UTC(2020, 0, 6),
+                        end: Date.UTC(2020, 0, 20)
+                    },
+                    {
+                        parent: 'sprint5',
+                        name: "Testes Unitários",
+                        id: 'sprint5-Unit',
+                        start: Date.UTC(2020, 0, 21),
+                        end: Date.UTC(2020, 0, 22),
+                        dependency: [ 'sprint5-Dev' ]
+                    },
+                    {
+                        parent: 'sprint5',
+                        name: "Testes de Integração",
+                        start: Date.UTC(2020, 0, 22),
+                        end: Date.UTC(2020, 0, 24),
+                        dependency: [ 'sprint5-Unit' ]
+                    },
+
+                    // Finalização
+                    {
+                        name: "Finalização",
+                        id: 'final',
+                        pointWidth: 10,
+                        dependency: [ 'desenvolvimento' ]
+                    },
+                    {
+                        parent: 'final',
+                        name: "Testes de Aceitação",
+                        id: 'final-aceitacao',
+                        start: Date.UTC(2020, 0, 27),
+                        end: Date.UTC(2020, 0, 31)
+                    },
+                    {
+                        parent: 'final',
+                        name: "Resolução de Problemas",
+                        start: Date.UTC(2020, 1, 3),
+                        end: Date.UTC(2020, 1, 14),
+                        dependency: [ 'final-aceitacao' ]
+                    },
+                    // Lançamento
+                    {
+                        name: "Release 1",
+                        dependency: [ 'final' ],
+                        start: Date.UTC(2020, 1, 17),
+                        end: Date.UTC(2020, 1, 21)
+                    }
+
+                ]
+            }]
+        });
+    </script>
+</body>
+</html>
