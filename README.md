@@ -6,7 +6,7 @@ I am available to embrace new projects, drop me a line on my [LinkedIn page](htt
 ### Quick Answers
 - 🌍 Based in Braga, Portugal, but also half French
 - 🔭 I’m currently working on: Home-Bank iOS Applications and on my Dissertation
-- 🌱 I’m currently learning: Objective-C and UIkit
+<!-- - 🌱 I’m currently learning: Swift -->
 - 👯 I’m looking to collaborate on: Web Development Project, frontend and backend-wise
 - 📫 How to reach me: You can reach me on [LinkedIn](https://www.linkedin.com/in/miguelsolans/), Skype (miguelrsolans) or even via e-mail (dev.miguelsolans (at) gmail (dot) com)
 - ⚡ Fun facts: Terminator Judgment Day is still the best movie ever produced. I love Music, classical and metal. I often do offroad. Coffee and Capuccino are my absolute favorite hot drinks! 
